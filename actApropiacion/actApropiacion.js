@@ -7,15 +7,18 @@ botonEnviar.addEventListener('click', (evento) => {
 
     const mensaje = areaDelTexto.value;
 
-    let tieneTexto;
-    if (mensaje === "") {
-        alert("El mensaje debe tener información");
-        tieneTexto = false;
-    } else {
-        tieneTexto = true;
+    let tieneTexto = false;
+
+    for (let i = 0; i < mensaje.length; i++) {
+        if (mensaje[i] !== " ") {
+            tieneTextoReal = true;
+            break; 
+        }
     }
 
-    if (tieneTexto === true) {
+    if (tieneTexto === false) {
+        alert("el mensaje debe contener información")
+    } else {
         const nuevoMensaje = document.createElement('p');
         nuevoMensaje.textContent = mensaje;
 
