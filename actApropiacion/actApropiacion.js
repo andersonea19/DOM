@@ -11,7 +11,7 @@ botonEnviar.addEventListener('click', (evento) => {
 
     for (let i = 0; i < mensaje.length; i++) {
         if (mensaje[i] !== " ") {
-            tieneTextoReal = true;
+            tieneTexto = true;
             break; 
         }
     }
